@@ -29,5 +29,45 @@ namespace LAB_1.Classes
             Array.Sort(array);
             return array;
         }
+
+        // Бинарный поиск
+        public static int BinarySearch(int[] array, int element)
+        {
+            int index = -1;
+            int left = 0;
+            int right = array.Length - 1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (array[mid] == element) return mid;
+                else if (array[mid] < element) left = mid + 1;
+                else right = mid - 1;
+            }
+            return index;
+        }
+        
+        // Интерполяционный поиск
+        public static int InterpolationSearch(int[] array, int element)
+        {
+            int lo = 0;
+            int mid = -1;
+            int hi = array.Length - 1;
+            int index = -1;
+            while (lo <= hi)
+            {
+                mid = (int)(lo + (((double)(hi - lo) / (array[hi] - array[lo])) * (element - array[lo])));
+                if (array[mid] == element)
+                {
+                    index = mid;
+                    break;
+                }
+                else
+                {
+                    if (array[mid] < element) lo = mid + 1;
+                    else hi = mid - 1;
+                }
+            }
+            return index;
+        }
     }
 }
