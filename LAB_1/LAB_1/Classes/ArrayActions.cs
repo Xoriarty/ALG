@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace LAB_1.Classes
 {
@@ -49,23 +46,45 @@ namespace LAB_1.Classes
         // Интерполяционный поиск
         public static int InterpolationSearch(int[] array, int element)
         {
-            int lo = 0;
-            int mid = -1;
-            int hi = array.Length - 1;
-            int index = -1;
-            while (lo <= hi)
+            int low = 0, high = array.Length - 1, mid;
+
+            while (array[high] != array[low] && element >= array[low] && element <= array[high])
             {
-                mid = (int)(lo + (((double)(hi - lo) / (array[hi] - array[lo])) * (element - array[lo])));
-                if (array[mid] == element)
+                mid = low + ((element - array[low]) * (high - low) / (array[high] - array[low]));
+
+                if (element == array[mid])
                 {
-                    index = mid;
-                    break;
+                    return mid;
+                }
+
+                else if (element < array[mid])
+                {
+                    high = mid - 1;
                 }
                 else
                 {
-                    if (array[mid] < element) lo = mid + 1;
-                    else hi = mid - 1;
+                    low = mid + 1;
                 }
+            }
+
+            if (element == array[low])
+            {
+                return low;
+            }
+
+            else
+            {
+                return -1;
+            }
+        }
+
+        // Линейный поиск
+        public static int LinearSearch(int[] array, int element)
+        {
+            int index = -1;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == element) return i;
             }
             return index;
         }
