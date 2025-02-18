@@ -41,22 +41,22 @@ namespace LAB_1
                             if (!int.TryParse(Console.ReadLine(), out int el)) Console.WriteLine("Некорректное число");
                             else
                             {
-                                int index;
+                                long index;
 
                                 stopwatch.Restart();
                                 index = ArrayActions.LinearSearch(B, el);
                                 stopwatch.Stop();
-                                Console.WriteLine($"Время выполнения линейного поиска: {stopwatch.ElapsedMilliseconds}");
+                                Console.WriteLine($"Время выполнения линейного поиска: {stopwatch.ElapsedTicks}");
 
                                 stopwatch.Restart();
                                 index = ArrayActions.BinarySearch(B, el);
                                 stopwatch.Stop();
-                                Console.WriteLine($"Время выполнения бинарного поиска: {stopwatch.ElapsedMilliseconds}");
-                                
+                                Console.WriteLine($"Время выполнения бинарного поиска: {stopwatch.ElapsedTicks}");
+
                                 stopwatch.Restart();
                                 index = ArrayActions.InterpolationSearch(B, el);
                                 stopwatch.Stop();
-                                Console.WriteLine($"Время выполнения интерполяционного поиска: {stopwatch.ElapsedMilliseconds}");
+                                Console.WriteLine($"Время выполнения интерполяционного поиска: {stopwatch.ElapsedTicks}");
 
                                 if (index == -1) Console.WriteLine("Элемент не найден");
                                 else Console.WriteLine($"Индекс элемента {el} = {index}");
