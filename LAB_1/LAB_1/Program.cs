@@ -1,9 +1,7 @@
 ﻿using LAB_1.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+
 
 namespace LAB_1
 {
@@ -11,6 +9,7 @@ namespace LAB_1
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
             Console.Write("Введите размер массива: ");
             string line = Console.ReadLine();
             if (!int.TryParse(line, out int N)) Console.WriteLine("Некорректный ввод числа");
@@ -33,19 +32,35 @@ namespace LAB_1
                                 end = tmp;
                             }
                             int[] A = ArrayActions.CreaeteArray(N, start, end);
-                            Console.WriteLine("Сформированный массив: ");
-                            ArrayActions.ViewArray(A);
+                            // Console.WriteLine("Сформированный массив: ");
+                            // ArrayActions.ViewArray(A);
                             int[] B = ArrayActions.Sort(A);
-                            Console.WriteLine("\nОтсоритрованный массив: ");
-                            ArrayActions.ViewArray(B);
-                            Console.Write("\nВведите элемент для поиска: ");
+                            // Console.WriteLine("\nОтсоритрованный массив: ");
+                            // ArrayActions.ViewArray(B);
+                            Console.Write("Введите элемент для поиска: ");
                             if (!int.TryParse(Console.ReadLine(), out int el)) Console.WriteLine("Некорректное число");
                             else
                             {
-                                int index = ArrayActions.BinarySearch(B, el);
-                                Console.WriteLine($"Результат с использованием бинарного поиска: {index}");
+                                int index;
+
+                                stopwatch.Restart();
+                                index = ArrayActions.LinearSearch(B, el);
+                                stopwatch.Stop();
+                                Console.WriteLine($"Время выполнения линейного поиска: {stopwatch.ElapsedMilliseconds}");
+
+                                stopwatch.Restart();
+                                index = ArrayActions.BinarySearch(B, el);
+                                stopwatch.Stop();
+                                Console.WriteLine($"Время выполнения бинарного поиска: {stopwatch.ElapsedMilliseconds}");
+                                
+                                stopwatch.Restart();
                                 index = ArrayActions.InterpolationSearch(B, el);
-                                Console.WriteLine($"Результат с использованием интерполяционного поиска: {index}");
+                                stopwatch.Stop();
+                                Console.WriteLine($"Время выполнения интерполяционного поиска: {stopwatch.ElapsedMilliseconds}");
+
+                                if (index == -1) Console.WriteLine("Элемент не найден");
+                                else Console.WriteLine($"Индекс элемента {el} = {index}");
+
                             }
                         }
                     }
