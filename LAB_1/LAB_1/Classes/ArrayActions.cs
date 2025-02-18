@@ -30,52 +30,48 @@ namespace LAB_1.Classes
         // Бинарный поиск
         public static int BinarySearch(int[] array, int element)
         {
-            int index = -1;
+            int mid;
             int left = 0;
             int right = array.Length - 1;
-            while (left <= right)
+            do
             {
-                int mid = left + (right - left) / 2;
-                if (array[mid] == element) return mid;
-                else if (array[mid] < element) left = mid + 1;
+                mid = (left + right) / 2;
+                if (element > array[mid]) left = mid + 1;
                 else right = mid - 1;
+            } while (array[mid] != element && (left <= right));
+            
+            // Для поиска первого
+            while (mid >= -1 && array[mid] == element)
+            {
+                mid --;
             }
-            return index;
+            mid += 1;
+            if (array[mid] == element) return mid;
+            return -1;
         }
         
         // Интерполяционный поиск
-        public static int InterpolationSearch(int[] array, int element)
+        public static long InterpolationSearch(int[] array, int element)
         {
-            int low = 0, high = array.Length - 1, mid;
-
-            while (array[high] != array[low] && element >= array[low] && element <= array[high])
+            long mid = -1;
+            long left = 0, right = array.Length - 1;
+            while (array[left] <= element && array[right] >= element)
             {
-                mid = low + ((element - array[low]) * (high - low) / (array[high] - array[low]));
-
-                if (element == array[mid])
-                {
-                    return mid;
-                }
-
-                else if (element < array[mid])
-                {
-                    high = mid - 1;
-                }
-                else
-                {
-                    low = mid + 1;
-                }
+                mid = left + (element - array[left]) * (right - left) / (array[right] - array[left]);
+                if (array[mid] < element) left = mid + 1;
+                else if (array[mid] > element) right = mid - 1;
+                else break;
             }
-
-            if (element == array[low])
+            if (array[left] == element) mid = left;
+            
+            // Для поиска первого
+            while (mid >= -1 && array[mid] == element)
             {
-                return low;
+                mid--;
             }
-
-            else
-            {
-                return -1;
-            }
+            mid += 1;
+            if (array[mid] == element) return mid;
+            return -1;
         }
 
         // Линейный поиск
