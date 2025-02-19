@@ -20,13 +20,6 @@ namespace LAB_1.Classes
             for (int i = 0; i < array.Length; i++) Console.Write($"{array[i]} ");
         }
 
-        // Базовая сортировка
-        public static int[] Sort(int[] array)
-        {
-            Array.Sort(array);
-            return array;
-        }
-
         // Бинарный поиск
         public static int BinarySearch(int[] array, int element)
         {
@@ -41,13 +34,15 @@ namespace LAB_1.Classes
             } while (array[mid] != element && (left <= right));
             
             // Для поиска первого
+            if (array[mid] != element) return -1;
+
             while (mid >= -1 && array[mid] == element)
             {
                 mid --;
             }
             mid += 1;
-            if (array[mid] == element) return mid;
-            return -1;
+            return mid;
+
         }
         
         // Интерполяционный поиск
@@ -63,15 +58,15 @@ namespace LAB_1.Classes
                 else break;
             }
             if (array[left] == element) mid = left;
-            
+            if (mid < 0 || mid > array.Length - 1) return -1;
             // Для поиска первого
             while (mid >= -1 && array[mid] == element)
             {
                 mid--;
             }
             mid += 1;
-            if (array[mid] == element) return mid;
-            return -1;
+            return mid;
+
         }
 
         // Линейный поиск
