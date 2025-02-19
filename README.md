@@ -8,3 +8,12 @@
 
 **Код для реализации методов:** [ArrayActions.cs](https://github.com/Xoriarty/ALG/blob/lab_1/LAB_1/LAB_1/Classes/ArrayActions.cs)  
 **Отчет:** [Report_1.md](https://github.com/Xoriarty/ALG/blob/lab_1/Report_1.md)
+
+
+### Часть 2. Сортировка данных
+
+#### Задание
+Необходимо реализовать 3 алгоритма сортировки и провести экспериментальное исследование их эффективности. 
+
+**Код для реализации методов:** [ArraySortMethods.cs](https://github.com/Xoriarty/ALG/blob/lab_1/LAB_1/LAB_1/Classes/ArraySortMethods.cs)  
+**Отчет:** [Report_2.md](https://github.com/Xoriarty/ALG/blob/lab_1/Report_2.md)
