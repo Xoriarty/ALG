@@ -34,7 +34,8 @@ namespace LAB_1
                             int[] A = ArrayActions.CreaeteArray(N, start, end);
                             // Console.WriteLine("Сформированный массив: ");
                             // ArrayActions.ViewArray(A);
-                            int[] B = ArrayActions.Sort(A);
+                            int[] B = (int[])A.Clone();
+                            Array.Sort(B);
                             // Console.WriteLine("\nОтсоритрованный массив: ");
                             // ArrayActions.ViewArray(B);
                             Console.Write("Введите элемент для поиска: ");
@@ -61,6 +62,30 @@ namespace LAB_1
                                 if (index == -1) Console.WriteLine("Элемент не найден");
                                 else Console.WriteLine($"Индекс элемента {el} = {index}");
 
+                                Console.WriteLine("Первые 10 элементов массива: ");
+                                ArraySortMethods.ViewArray(A);
+
+                                
+                                int [] sort = (int[])A.Clone();
+                                stopwatch.Restart();
+                                ArraySortMethods.BubbleSort(sort);
+                                stopwatch.Stop();
+                                Console.WriteLine($"\nВремя выполнения сортировки пузырьком: {stopwatch.ElapsedMilliseconds}");
+
+                                int [] sort1 = (int[])A.Clone();
+                                stopwatch.Restart();
+                                ArraySortMethods.CountingSort(sort1);
+                                stopwatch.Stop();
+                                Console.WriteLine($"Время выполнения сортировки подсчетом: {stopwatch.ElapsedMilliseconds}");
+
+                                int [] sort2 = (int[])A.Clone();
+                                stopwatch.Restart();
+                                ArraySortMethods.QuickSort(sort2, 0, sort2.Length-1);
+                                stopwatch.Stop();
+                                Console.WriteLine($"Время выполнения быстрой сортировки: {stopwatch.ElapsedMilliseconds}");
+
+                                Console.WriteLine("\nПервые 10 элементов отсортированного массива: ");
+                                ArraySortMethods.ViewArray(sort);
                             }
                         }
                     }
