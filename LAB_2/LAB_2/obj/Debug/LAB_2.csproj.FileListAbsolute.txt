@@ -1,0 +1,7 @@
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\bin\Debug\LAB_2.exe.config
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\bin\Debug\LAB_2.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\bin\Debug\LAB_2.pdb
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\obj\Debug\LAB_2.csproj.AssemblyReference.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\obj\Debug\LAB_2.csproj.CoreCompileInputs.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\obj\Debug\LAB_2.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_2\LAB_2\obj\Debug\LAB_2.pdb
