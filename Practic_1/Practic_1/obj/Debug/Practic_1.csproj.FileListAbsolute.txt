@@ -1,0 +1,7 @@
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\bin\Debug\Practic_1.exe.config
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\bin\Debug\Practic_1.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\bin\Debug\Practic_1.pdb
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\obj\Debug\Practic_1.csproj.AssemblyReference.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\obj\Debug\Practic_1.csproj.CoreCompileInputs.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\obj\Debug\Practic_1.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\Practic_1\Practic_1\obj\Debug\Practic_1.pdb
