@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F734389D-9C01-4730-91FD-77F32CADF35A}</ProjectGuid>
+    <ProjectGuid>{77F59362-97BF-429C-A224-CC626CE0DA13}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LAB_2</RootNamespace>
-    <AssemblyName>LAB_2</AssemblyName>
+    <RootNamespace>LAB_3</RootNamespace>
+    <AssemblyName>LAB_3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="LList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

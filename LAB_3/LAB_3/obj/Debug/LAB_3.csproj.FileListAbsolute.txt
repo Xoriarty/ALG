@@ -1,0 +1,7 @@
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\bin\Debug\LAB_3.exe.config
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\bin\Debug\LAB_3.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\bin\Debug\LAB_3.pdb
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\obj\Debug\LAB_3.csproj.AssemblyReference.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\obj\Debug\LAB_3.csproj.CoreCompileInputs.cache
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\obj\Debug\LAB_3.exe
+C:\Users\holdy\OneDrive\Рабочий стол\ALG\LAB_3\LAB_3\obj\Debug\LAB_3.pdb
